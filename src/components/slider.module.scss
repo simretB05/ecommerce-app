@@ -1,0 +1,77 @@
+@import "../styles/styles.scss";
+
+.slider {
+    width: 100vw;
+    display: flex;
+    overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  height: 400px;
+  display: none;
+  opacity: 0;
+  border: 1px solid green;
+ 
+}
+.slide__image {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+}
+.active {
+  display: block;
+  width: 100%;
+display: block;
+
+}
+.btn__container{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    justify-items: space-arround;
+    align-items: center;
+    top: 50%
+}
+// .btn__slide .next{
+//     background: $c-White;
+//     cursor: pointer;
+//     border: none;
+//     border-radius: 50%;
+//     width: 30px;
+//     height: 30px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     border:1px soild $c-White;
+   
+// }
+
+// .btn-slide img {
+//   width: 25px;
+//   height: 25px;
+//   pointer-events: none;
+// }
+
+
+
+// .container-dots {
+//   position: absolute;
+//   bottom: 10px;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   display: flex;
+// }
+// .dot {
+//   width: 20px;
+//   height: 20px;
+//   border-radius: 50%;
+//   border: 3px solid #f1f1f1;
+//   margin: 0 5px;
+//   background: #f1f1f1;
+// }
+// .dot.active {
+//   background: rgb(32, 32, 32);
+// }

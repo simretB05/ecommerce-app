@@ -1,0 +1,120 @@
+@import "../styles/styles.scss";
+
+.hero{
+    width: 100%;
+&__container{
+    width: 100%;
+}
+&__image{
+    width: 100%;
+    @include laptop-query{
+        
+    }
+}
+&__content{
+    padding: $p-base;
+}
+&__content__header{
+    text-transform: uppercase;
+    color: $c-Orange;
+    font-size: $c-Smfont-size;
+    font-weight: $fw-bold;
+    letter-spacing: 0.15rem;
+    box-shadow: $c-Pal-orange;
+}
+&__content__title{
+    padding-top:$p-base ;
+    width: 259px;
+    font-size: 28px; 
+    padding-top: 0.9rem;
+    font-weight: $fw-black;
+    padding-bottom: $p-base;
+}
+&__content__text{
+    color: $c-Dark-grayish-blue;
+    font-weight: $fw-semi-normal;
+    font-size: 15px;
+    opacity: 0.9;
+}
+&__price__holder{
+    display: flex;
+    justify-content: space-between;
+    padding: $p-base $p-base 0 0;
+}
+&__price__container{
+  width: 118px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+&__price__main{
+
+  font-weight: $fw-black;
+    
+}
+&__price__discount{
+    width: 50px;
+    background-color: $c-Pal-orange;
+    color: $c-Orange;
+    text-align: center;
+    font-weight: $fw-black;
+    border-radius: 5px;
+}
+&__price__original{
+       font-weight: $fw-bold;
+        color: $c-light-black;
+        opacity: .7;
+        text-decoration: line-through;
+}
+&__counter__section{
+    width: 100%;
+    border-radius: 10px;
+    height: 56px;
+    background-color: $c-Light-grayish-blue;
+    border: 1px solid $c-Light-grayish-blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: $m-base*1.5;
+}
+&__counter__btn__minus{
+         border: none;
+        background-color: transparent;
+        &:hover {
+            opacity: 0.5;
+        }
+
+}
+&__counter__text{
+    font-weight: $fw-black;
+}
+&__counter__btn__plus{
+         border: none;
+        background-color: transparent;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+&__cart{
+    border: none;
+    margin: 1rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 56px;
+    background-color: $c-Orange;
+}
+&__cart__icon{
+    width: 15px;
+    height: 15px;
+
+}
+&__cart__text{
+  color: $c-White;
+  font-size: $c-mfont-size;
+  margin-left:$m-base ;
+
+}
+}
