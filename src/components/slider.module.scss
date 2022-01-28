@@ -10,19 +10,18 @@
   width: 100%;
   height: 400px;
   display: none;
-  opacity: 0;
-  border: 1px solid green;
- 
+
 }
 .slide__image {
   width: 100vw;
   height: 100%;
   object-fit: cover;
 }
-.active {
+.slide__active {
   display: block;
   width: 100%;
 display: block;
+
 
 }
 .btn__container{

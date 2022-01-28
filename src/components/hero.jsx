@@ -1,7 +1,9 @@
 import React from "react";
 import classes from "../components/hero.module.scss";
+import AddCart from "./addCart";
 import Slider from "./slider";
-const Hero = () => {
+const Hero = (props) => {
+  const { products, onAdd, cartItem } = props;
   return (
     <section className={classes.hero}>
       <div className={classes.hero__container}>
@@ -18,30 +20,16 @@ const Hero = () => {
             Featuring a durable rubber outer sole, they’ll withstand everything
             the weather can offer.
           </p>
-          <div className={classes.hero__price__holder}>
-            <div className={classes.hero__price__container}>
-              <p className={classes.hero__price__main}>$125.00</p>
-              <p className={classes.hero__price__discount}>50%</p>
-            </div>
-            <p className={classes.hero__price__original}>$250.00</p>
-          </div>
-          <div className={classes.hero__counter__section}>
-            <button className={classes.hero__counter__btn__minus}>
-              <img src="/images/icon-minus.svg" alt="minus btn" />
-            </button>
-            <p className={classes.hero__counter__text}>0</p>
-            <button className={classes.hero__counter__btn__plus}>
-              <img src="/images/icon-plus.svg" alt="plus btn" />
-            </button>
-          </div>
-          <button className={classes.hero__cart}>
-            <img
-              className={classes.hero__cart__icon}
-              src="/images/icon-cart.svg"
-              alt="cart btn"
+        </div>
+        <div>
+          {products.map((product) => (
+            <AddCart
+              onAdd={onAdd}
+              key={product.id}
+              product={product}
+              cartItem={cartItem}
             />
-            <p className={classes.hero__cart__text}>Add to cart</p>
-          </button>
+          ))}
         </div>
       </div>
     </section>

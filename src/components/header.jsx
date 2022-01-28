@@ -1,13 +1,23 @@
 import React, { useState } from "react";
 import classes from "../components/header.module.scss";
+import CartBasket from "./cartBasket";
 
-const Header = () => {
+const Header = (props) => {
+  const { products, cartItem, onAdd } = props;
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log("You clicked submit.");
+  }
   // const [menuClose, setMenClose] = useState(false);
+
   const [menuOpen, setMenuOpen] = useState(false);
 
   const menuToggleHandler = () => {
     setMenuOpen((p) => !p);
   };
+  //adding to cart
+
   return (
     <header className={classes.header}>
       <div className={classes.header__content}>
@@ -50,44 +60,63 @@ const Header = () => {
         >
           <ul className={classes.header__navlist}>
             <li className={classes.header__navlistitem}>
-              <a className={classes.header__navlistitemlink} href="/">
+              <a
+                onClick={handleSubmit}
+                className={classes.header__navlistitemlink}
+                href="/"
+              >
                 Collections
               </a>
             </li>
             <li className={classes.header__navlistitem}>
-              <a className={classes.header__navlistitemlink} href="/">
+              <a
+                onClick={handleSubmit}
+                className={classes.header__navlistitemlink}
+                href="/"
+              >
                 Men
               </a>
             </li>
             <li className={classes.header__navlistitem}>
-              <a className={classes.header__navlistitemlink} href="/">
+              <a
+                onClick={handleSubmit}
+                className={classes.header__navlistitemlink}
+                href="/"
+              >
                 Women
               </a>
             </li>
             <li className={classes.header__navlistitem}>
-              <a className={classes.header__navlistitemlink} href="/">
+              <a
+                onClick={handleSubmit}
+                className={classes.header__navlistitemlink}
+                href="/"
+              >
                 About
               </a>
             </li>
             <li className={classes.header__navlistitem}>
-              <a className={classes.header__navlistitemlink} href="/">
+              <a
+                onClick={handleSubmit}
+                className={classes.header__navlistitemlink}
+                href="/"
+              >
                 Contact
               </a>
             </li>
           </ul>
         </nav>
-        <div className={classes.header__cart}>
-          <img
-            className={classes.header__cartimage}
-            src="/images/icon-cart.svg"
-            alt=""
-          />
-          <img
-            className={classes.header__cartavator}
-            src="/images/image-avatar.png"
-            alt=""
-          />
+        <div>
+          {products.map((product) => (
+            <CartBasket
+              key={product.id}
+              product={product}
+              cartItem={cartItem}
+            />
+          ))}
+          ;
         </div>
+        {/* <CartBasket products={products} cartItem={cartItem} /> */}
       </div>
     </header>
   );

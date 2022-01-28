@@ -27,7 +27,11 @@ function Slider() {
         return (
           <div
             key={obj.id}
-            className={slideIndex === index + 1 ? "slide active" : "slide"}
+            className={
+              slideIndex === index + 1
+                ? `${classes.slide} ${classes.slide__active}`
+                : `${classes.slide}`
+            }
           >
             <img
               className={classes.slide__image}
