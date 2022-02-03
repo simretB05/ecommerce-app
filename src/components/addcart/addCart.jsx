@@ -1,8 +1,7 @@
-import classes from "../components/addCart.module.scss";
+import classes from "../addcart/addCart.module.scss";
 
 const AddCart = (props) => {
-  const { product, onAdd, cartItem } = props;
-  console.log(cartItem);
+  const { product, onAdd, onRemove, setData, getData } = props;
 
   return (
     <div>
@@ -18,7 +17,10 @@ const AddCart = (props) => {
         </div>
 
         <div className={classes.hero__price__counter__section}>
-          <button className={classes.hero__price__counter__btn__minus}>
+          <button
+            className={classes.hero__price__counter__btn__minus}
+            onClick={() => onRemove(product)}
+          >
             <img src="/images/icon-minus.svg" alt="minus btn" />
           </button>
           <p className={classes.hero__price__counter__text}>{product.qty}</p>
@@ -38,12 +40,13 @@ const AddCart = (props) => {
           />
           <p
             className={classes.hero__price__cart__text}
-            onClick={() => onAdd(product)}
+            onClick={() => setData(product)}
           >
             Add to cart
           </p>
         </button>
       </div>
+      <button onClick={() => getData()}></button>
     </div>
   );
 };

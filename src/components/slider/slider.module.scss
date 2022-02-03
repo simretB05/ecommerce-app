@@ -1,4 +1,4 @@
-@import "../styles/styles.scss";
+@import "../../styles/styles.scss";
 
 .slider {
     width: 100vw;
@@ -34,20 +34,32 @@ display: block;
     align-items: center;
     top: 50%
 }
-// .btn__slide .next{
-//     background: $c-White;
-//     cursor: pointer;
-//     border: none;
-//     border-radius: 50%;
-//     width: 30px;
-//     height: 30px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     border:1px soild $c-White;
+.next{
+    background: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px soild $c-White;
    
-// }
-
+}
+.prev{
+    background: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px soild $c-White;
+   
+}
 // .btn-slide img {
 //   width: 25px;
 //   height: 25px;

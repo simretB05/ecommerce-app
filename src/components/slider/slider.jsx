@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import dataSlider from "./dataSlider";
-import BtnSlider from "./btnslider";
-import classes from "../components/slider.module.scss";
+import dataSlider from "../dataSlider/dataSlider";
+import BtnSlider from "../btnslider/btnslider";
+import classes from "../slider/slider.module.scss";
 
 function Slider() {
   const [slideIndex, setSlideIndex] = useState(1);

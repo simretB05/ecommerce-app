@@ -3,7 +3,7 @@ const data = {
     {
       id: "1",
       discription: "  Autumn Limited Edition...",
-      price: 850,
+      price: 250,
       qty: 0,
     },
   ],

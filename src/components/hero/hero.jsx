@@ -1,9 +1,9 @@
 import React from "react";
-import classes from "../components/hero.module.scss";
-import AddCart from "./addCart";
-import Slider from "./slider";
+import classes from "../hero/hero.module.scss";
+import AddCart from "../addcart/addCart";
+import Slider from "../slider/slider";
 const Hero = (props) => {
-  const { products, onAdd, cartItem } = props;
+  const { products, onAdd, cartItem, onRemove, setData, getData } = props;
   return (
     <section className={classes.hero}>
       <div className={classes.hero__container}>
@@ -24,10 +24,13 @@ const Hero = (props) => {
         <div>
           {products.map((product) => (
             <AddCart
+              onRemove={onRemove}
               onAdd={onAdd}
               key={product.id}
               product={product}
               cartItem={cartItem}
+              getData={getData}
+              setData={setData}
             />
           ))}
         </div>

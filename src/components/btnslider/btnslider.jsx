@@ -1,12 +1,11 @@
 import React from "react";
-import classes from "../components/slider.module.scss";
+import classes from "../slider/slider.module.scss";
 
 function BtnSlider({ moveSlide, direction }) {
-  console.log("simret");
   return (
     <button
       onClick={moveSlide}
-      className={direction === "prev" ? "btn__slide  prev" : "btn__slide  next"}
+      className={direction === "prev" ? `${classes.prev}` : ` ${classes.next}`}
     >
       <img
         src={

@@ -1,4 +1,5 @@
-@import "../styles/styles.scss";
+@import "../../styles/styles.scss";
+
 .shoping__cart {
     display: block;
     margin: auto;
@@ -75,7 +76,8 @@
     }
     &__span {
         font-weight: $fw-bold;
-        color: $c-Black;
+     font-weight: 100;
+    color: #898585;
     }
     &__img {
         width: 48px;

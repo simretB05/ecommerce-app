@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import classes from "../components/header.module.scss";
-import CartBasket from "./cartBasket";
+import classes from "../header/header.module.scss";
+import CartBasket from "../cartBasket/cartBasket";
 
 const Header = (props) => {
-  const { products, cartItem, onAdd } = props;
+  const { products, cartItem, onTrash } = props;
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -112,9 +112,9 @@ const Header = (props) => {
               key={product.id}
               product={product}
               cartItem={cartItem}
+              onTrash={onTrash}
             />
           ))}
-          ;
         </div>
         {/* <CartBasket products={products} cartItem={cartItem} /> */}
       </div>
